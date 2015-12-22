@@ -1,0 +1,12 @@
+com/chuongntv/areaapp/AreaManagerApplication.class
+com/chuongntv/areaapp/models/District.class
+com/chuongntv/areaapp/controllers/DistrictApi.class
+com/chuongntv/areaapp/controllers/AppLoader.class
+com/chuongntv/areaapp/models/DataList.class
+com/chuongntv/areaapp/models/Country.class
+com/chuongntv/areaapp/repositories/DistrictRepository.class
+com/chuongntv/areaapp/controllers/CityApi.class
+com/chuongntv/areaapp/models/City.class
+com/chuongntv/areaapp/controllers/CountryApi.class
+com/chuongntv/areaapp/repositories/CountryRepository.class
+com/chuongntv/areaapp/repositories/CityRepository.class

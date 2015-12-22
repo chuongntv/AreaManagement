@@ -1,33 +1,36 @@
 package com.chuongntv.areaapp.models;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
 /**
  * Created by chuongntv on 12/17/15.
  */
 @Entity
 @Table(name="countries")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
+    @NotBlank
     @NotNull
     private String name;
+    @NotBlank
     @NotNull
     private String code;
 
-    @OneToMany(targetEntity=City.class)
-    private List<City> cities;
-
     public Country() {
     }
-    public Country(Integer id){
+
+    public Country(Long id) {
         this.id=id;
     }
 
-    public Country(Integer id, String name, String code) {
+    public Country(Long id, String name, String code) {
         this.id=id;
         this.name = name;
         this.code = code;
@@ -38,11 +41,11 @@ public class Country {
         this.code = code;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -61,14 +64,5 @@ public class Country {
     public void setCode(String code) {
         this.code = code;
     }
-
-    public List<City> getCities() {
-        return cities;
-    }
-
-    public void setCities(List<City> cities) {
-        this.cities = cities;
-    }
-
 
 }
