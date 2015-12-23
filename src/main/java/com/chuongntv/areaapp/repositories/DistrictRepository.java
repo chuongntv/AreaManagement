@@ -11,8 +11,10 @@ import java.util.List;
 /**
  * Created by chuongntv on 12/17/15.
  */
-public interface DistrictRepository extends CrudRepository<District,Integer>{
-    public List<District> findByCode(String name);
-    public List<District> findByCity(City city);
-    public Page<District> findByCity(City city, Pageable pageable);
+public interface DistrictRepository extends CrudRepository<District, Long> {
+    List<District> findByCode(String name);
+
+    List<District> findByCity(City city);
+
+    Page<District> findByCity(City city, Pageable pageable);
 }

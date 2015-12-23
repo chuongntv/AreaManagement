@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Framework</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Edit City</h1>
+<h2><span th:text="${errorMessage}" th:if="${errorMessage}!='NONE'"/> </h2>
+<form action="#" method="post" th:if="${errorMessage}=='NONE' or ${errorMessage}=='Update City Success'">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="txtName" id="txtName" th:value="${city.name}"/></td>
+        </tr>
+        <tr>
+            <td>Code</td>
+            <td><input type="text" name="txtCode" id="txtCode" th:value="${city.code}"/></td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td>
+                <select name="txtCountry" id="txtCountry">
+                    <option th:each="country : ${lstCountries}" th:value="${country.id}" th:text="${country.name}" th:selected="${country.id}==${countryid}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Update"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

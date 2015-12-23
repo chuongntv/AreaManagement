@@ -1,56 +1,51 @@
 package com.chuongntv.areaapp.models;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
 /**
  * Created by chuongntv on 12/17/15.
  */
 @Entity
 @Table(name="cities")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
    /* @NotNull
     private Integer countryId;*/
     @NotNull
+    @NotBlank
     private String name;
 
     @NotNull
+    @NotBlank
     private String code;
 
     @ManyToOne
     private Country country;
 
-    @OneToMany(targetEntity=District.class)
-    private List<District> districts;
-
-    public List<District> getDistricts() {
-        return districts;
-    }
-
-    public void setDistricts(List<District> districts) {
-        this.districts = districts;
-    }
-
     public City() {
         super();
     }
-    public City(Integer id){
+
+    public City(Long id) {
         super();
         this.id=id;
     }
 
-    public City(Integer id, String name, String code) {
+    public City(Long id, String name, String code) {
         super();
         this.id = id;
         this.name = name;
         this.code = code;
     }
 
-    public City(Integer id,String name, String code, Country country) {
+    public City(Long id, String name, String code, Country country) {
         super();
         this.id = id;
         this.name = name;
@@ -65,11 +60,11 @@ public class City {
         this.country = country;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -96,5 +91,6 @@ public class City {
     public void setCode(String code) {
         this.code = code;
     }
+
 
 }

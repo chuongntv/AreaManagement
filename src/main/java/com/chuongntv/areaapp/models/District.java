@@ -1,5 +1,8 @@
 package com.chuongntv.areaapp.models;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -8,15 +11,18 @@ import javax.validation.constraints.NotNull;
  */
 @Entity
 @Table(name="districts")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class District {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
 
     @NotNull
+    @NotBlank
     private String name;
 
     @NotNull
+    @NotBlank
     private String code;
 
     @ManyToOne
@@ -26,7 +32,7 @@ public class District {
         super();
     }
 
-    public District(Integer id){
+    public District(Long id) {
         super();
         this.id=id;
     }
@@ -38,7 +44,7 @@ public class District {
         this.city = city;
     }
 
-    public District(Integer id, String name, String code, City city) {
+    public District(Long id, String name, String code, City city) {
         super();
         this.id = id;
         this.name = name;
@@ -46,11 +52,11 @@ public class District {
         this.city = city;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

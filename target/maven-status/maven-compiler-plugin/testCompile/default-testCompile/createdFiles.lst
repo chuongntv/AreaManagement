@@ -1,0 +1,4 @@
+com/chuongntv/areaapp/test/CityTests.class
+com/chuongntv/areaapp/test/CountryTests.class
+com/chuongntv/areaapp/config/DatabaseForTest.class
+com/chuongntv/areaapp/test/DistrictsTests.class

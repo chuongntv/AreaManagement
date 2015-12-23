@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Framework</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h2><span th:text="${errorMessage}"
+   th:if="${errorMessage != 'SUCCESS'}"></span></h2>
+<a th:if="${errorMessage == 'SUCCESS'}" th:href="@{/district/city/} + ${cityId} + @{/create}" th:text="Create"></a>
+<table th:if="${errorMessage == 'SUCCESS'}" th:border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="district : ${lstDistricts}">
+        <td th:text="${district.id}"></td>
+        <td th:text="${district.name}"></td>
+        <td th:text="${district.code}"></td>
+        <td>
+            <a th:href="@{/district/edit/} + ${district.id}" th:text="Edit"></a>
+            <a th:href="@{/district/delete/} + ${district.id}" th:text="Delete"></a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
