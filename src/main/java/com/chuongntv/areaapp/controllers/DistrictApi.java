@@ -7,6 +7,7 @@ import com.chuongntv.areaapp.repositories.CityRepository;
 import com.chuongntv.areaapp.repositories.CountryRepository;
 import com.chuongntv.areaapp.repositories.DistrictRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,7 @@ import java.util.List;
 /**
  * Created by chuongntv on 12/22/15.
  */
-@RequestMapping("/district")
+@RequestMapping("/api/district")
 @RestController
 public class DistrictApi {
     @Autowired
@@ -29,8 +30,8 @@ public class DistrictApi {
 
     @Autowired
     private DistrictRepository districtRepository;
-
-    private int itemPerPage = 1;
+    @Value("${areamanagement.itemperpage}")
+    private String itemPerPage;
 
     @RequestMapping("/fetch/{id}")
     public ResponseEntity<?> fetchDistrictById(@PathVariable Long id) {
@@ -53,7 +54,7 @@ public class DistrictApi {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
             if (pageNumber > 0) {
-                List<District> lstDistricts = districtRepository.findByCity(city, new PageRequest(pageNumber - 1, itemPerPage)).getContent();
+                List<District> lstDistricts = districtRepository.findByCity(city, new PageRequest(pageNumber - 1, Integer.parseInt(itemPerPage))).getContent();
                 for (District district : lstDistricts) {
                     district.setCity(null);
                 }

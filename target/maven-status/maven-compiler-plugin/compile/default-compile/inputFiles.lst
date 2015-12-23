@@ -1,7 +1,6 @@
 /home/chuongntv/Desktop/AreaManagement/AreaManagement/src/main/java/com/chuongntv/areaapp/models/Country.java
 /home/chuongntv/Desktop/AreaManagement/AreaManagement/src/main/java/com/chuongntv/areaapp/models/DataList.java
 /home/chuongntv/Desktop/AreaManagement/AreaManagement/src/main/java/com/chuongntv/areaapp/repositories/CountryRepository.java
-/home/chuongntv/Desktop/AreaManagement/AreaManagement/src/main/java/com/chuongntv/areaapp/controllers/AppLoader.java
 /home/chuongntv/Desktop/AreaManagement/AreaManagement/src/main/java/com/chuongntv/areaapp/controllers/CityApi.java
 /home/chuongntv/Desktop/AreaManagement/AreaManagement/src/main/java/com/chuongntv/areaapp/models/City.java
 /home/chuongntv/Desktop/AreaManagement/AreaManagement/src/main/java/com/chuongntv/areaapp/controllers/CountryApi.java

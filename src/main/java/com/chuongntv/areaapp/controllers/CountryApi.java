@@ -8,6 +8,7 @@ import com.chuongntv.areaapp.repositories.CityRepository;
 import com.chuongntv.areaapp.repositories.CountryRepository;
 import com.chuongntv.areaapp.repositories.DistrictRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
@@ -31,8 +32,8 @@ public class CountryApi {
 
     @Autowired
     private DistrictRepository districtRepository;
-
-    private int itemPerPage = 1;
+    @Value("${areamanagement.itemperpage}")
+    private String itemPerPage;
 
     @RequestMapping("/fetch/{id}")
     public ResponseEntity<?> fetchCountryById(@PathVariable Long id) {
@@ -51,7 +52,7 @@ public class CountryApi {
     public ResponseEntity<?> fetchCountryByPage(@PathVariable Integer pageNumber) {
         try {
             if (pageNumber > 0) {
-                Page<Country> pageCountries = countryRepository.findAll(new PageRequest(pageNumber - 1, itemPerPage));
+                Page<Country> pageCountries = countryRepository.findAll(new PageRequest(pageNumber-1, Integer.parseInt(itemPerPage)));
                 List<Country> lstCountries = pageCountries.getContent();
                 return new ResponseEntity<>(new DataList(lstCountries), HttpStatus.OK);
             } else
