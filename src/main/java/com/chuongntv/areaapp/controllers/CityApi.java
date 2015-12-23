@@ -53,7 +53,7 @@ public class CityApi {
     public ResponseEntity<?> fetchCityByCountryAndPage(@PathVariable Long countryId, @PathVariable Integer pageNumber) {
         try {
             Country country = countryRepository.findOne(countryId);
-            if (country.equals(null)) {
+            if (country==null) {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
             if (pageNumber > 0) {
@@ -72,13 +72,13 @@ public class CityApi {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public ResponseEntity<?> saveCity(@Valid @RequestBody City city) {
         try {
-            if (city.getCountry().equals(null))
+            if (city.getCountry()==null)
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-            if (!city.getId().equals(null)) {
+            if (city.getId()!=null) {
                 List<City> lstCities = cityRepository.findByCode(city.getCode());
                 if (lstCities.size() > 0 && !lstCities.get(0).getId().equals(city.getId()))
                     return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-                if (countryRepository.findOne(city.getCountry().getId()).equals(null))
+                if (countryRepository.findOne(city.getCountry().getId())==null)
                     return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             } else {
                 if (cityRepository.findByCode(city.getCode()).size() > 0)
@@ -97,7 +97,7 @@ public class CityApi {
     public ResponseEntity<?> deleteCity(@PathVariable Long id) {
         try {
             City ct = cityRepository.findOne(id);
-            if (ct.equals(null))
+            if (ct==null)
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             List<District> lstDistricts = districtRepository.findByCity(ct);
             for (District d : lstDistricts)

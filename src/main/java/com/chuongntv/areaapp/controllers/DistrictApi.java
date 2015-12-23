@@ -37,7 +37,7 @@ public class DistrictApi {
     public ResponseEntity<?> fetchDistrictById(@PathVariable Long id) {
         try {
             District district = districtRepository.findOne(id);
-            if (district.equals(null))
+            if (district==null)
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             district.setCity(null);
             return new ResponseEntity<>(district, HttpStatus.OK);
@@ -50,7 +50,7 @@ public class DistrictApi {
     public ResponseEntity<?> fetchDistrictByCityAndPage(@PathVariable Long cityId, @PathVariable Integer pageNumber) {
         try {
             City city = cityRepository.findOne(cityId);
-            if (city.equals(null)) {
+            if (city==null) {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
             if (pageNumber > 0) {
@@ -69,13 +69,13 @@ public class DistrictApi {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public ResponseEntity<?> saveDistrict(@Valid @RequestBody District district) {
         try {
-            if (district.getCity().equals(null))
+            if (district.getCity()==null)
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-            if (!district.getId().equals(null)) {
+            if (district.getId()!=null) {
                 List<District> lstDistrict = districtRepository.findByCode(district.getCode());
                 if (lstDistrict.size() > 0 && !lstDistrict.get(0).getId().equals(district.getId()))
                     return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-                if (cityRepository.findByCode(district.getCity().getCode()).equals(null))
+                if (cityRepository.findByCode(district.getCity().getCode())==null)
                     return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
                 District tmp = districtRepository.findOne(district.getId());
                 List<City> lstCities = cityRepository.findByCountry(tmp.getCity().getCountry());
@@ -104,7 +104,7 @@ public class DistrictApi {
     public ResponseEntity<?> deleteDistrict(@PathVariable Long id) {
         try {
             District dt = districtRepository.findOne(id);
-            if (dt.equals(null))
+            if (dt==null)
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             districtRepository.delete(dt);
         } catch (Exception ex) {

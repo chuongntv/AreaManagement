@@ -39,7 +39,7 @@ public class CountryApi {
     public ResponseEntity<?> fetchCountryById(@PathVariable Long id) {
         try {
             Country country = countryRepository.findOne(id);
-            if (country.equals(null))
+            if (country==null)
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             return new ResponseEntity<>(country, HttpStatus.OK);
         } catch (Exception ex) {
@@ -65,7 +65,7 @@ public class CountryApi {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public ResponseEntity<?> saveCountry(@Valid @RequestBody Country country) {
         try {
-            if (!country.getId().equals(null)) {
+            if (country.getId()!=null) {
                 List<Country> lstContries = countryRepository.findByCode(country.getCode());
                 if (lstContries.size() > 0 && lstContries.get(0).getId().equals(country.getId()))
                     return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -85,7 +85,7 @@ public class CountryApi {
     public ResponseEntity<?> deleteCountry(@PathVariable Long id) {
         try {
             Country ct = countryRepository.findOne(id);
-            if (ct.equals(null))
+            if (ct==null)
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             List<City> lstCities = cityRepository.findByCountry(ct);
             for (City c : lstCities) {

@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="246a6b62-b865-4ff2-8632-43baf704c51d" name="Default" comment="Delete View Controller&#10;Recode API&#10;Update DataList Class&#10;Modify Model">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/profiles.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AreaManager.iml" afterPath="$PROJECT_DIR$/AreaManager.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CityApi.java" afterPath="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CityApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CountryApi.java" afterPath="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CountryApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/DistrictApi.java" afterPath="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/DistrictApi.java" />
     </list>
     <ignored path="AreaManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,58 +34,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CityApi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CityApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="41" />
+            <state vertical-scroll-proportion="-7.857143">
+              <caret line="78" column="74" selection-start-line="78" selection-start-column="74" selection-end-line="78" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountryApi.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CountryApi.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CountryApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.29147983">
+              <caret line="65" column="49" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="49" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/AppLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2139#2140#0" expanded="true" />
-                <element signature="e#2195#2196#0" expanded="true" />
-                <element signature="e#2281#2282#0" expanded="true" />
-                <element signature="e#2331#2332#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -95,28 +57,8 @@
       <file leaf-file-name="DistrictApi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/DistrictApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30379745">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.285714">
+              <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -187,11 +129,11 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/AppLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CityApi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CountryApi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/DistrictApi.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CityApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/DistrictApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CountryApi.java" />
       </list>
     </option>
   </component>
@@ -947,12 +889,12 @@
       <workItem from="1450828664174" duration="25000" />
       <workItem from="1450833959026" duration="1080000" />
       <workItem from="1450835403596" duration="3192000" />
-      <workItem from="1450838896408" duration="99000" />
+      <workItem from="1450838896408" duration="1187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101680000" />
+    <option name="totallyTimeSpent" value="102768000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1233,13 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/models/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/city/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.407408">
@@ -1317,13 +1252,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/repositories/CountryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30125523">
-          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/AreaManagerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17857143">
@@ -1376,33 +1304,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CityApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CountryApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/DistrictApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-15.222222">
           <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
           <folding />
         </state>
@@ -1410,8 +1314,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30379745">
+        <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/repositories/CountryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30379745">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/models/Country.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33183858">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/DistrictApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.285714">
+          <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CityApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.857143">
+          <caret line="78" column="74" selection-start-line="78" selection-start-column="74" selection-end-line="78" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chuongntv/areaapp/controllers/CountryApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29147983">
+          <caret line="65" column="49" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="49" />
           <folding />
         </state>
       </provider>
