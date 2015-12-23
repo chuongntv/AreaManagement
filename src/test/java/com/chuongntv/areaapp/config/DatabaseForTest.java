@@ -16,7 +16,7 @@ public class DatabaseForTest {
     @Autowired
     private CountryRepository countryRepository;
 
-    public String createDataCountry(){
+    public void createDataCountry(){
         ArrayList<Country> countries = new ArrayList<Country>();
         countries.add(new Country("vietnam","vi"));
         countries.add(new Country("thailands","th"));
@@ -27,6 +27,5 @@ public class DatabaseForTest {
              ) {
             countryRepository.save(country);
         }
-        return new Gson().toJson(countries);
     }
 }
