@@ -1,0 +1,9 @@
+/target
+/mvnw.cmd
+/mvnw
+/AreaManager.iml
+/src/main/resources/templates
+/src/main/java/com/chuongntv/areaapp/controllers/AppLoader.java
+/.mvn
+/.idea
+/src/test
